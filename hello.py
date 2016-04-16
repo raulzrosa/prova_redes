@@ -10,7 +10,7 @@ def home():
  
 @app.route("/echo", methods=['POST'])
 def echo(): 
-    return "You said: " + request.args.get('texto', '')
+    return "You said: " + request.form.get('texto', '')
  
 
 if __name__ == "__main__":
