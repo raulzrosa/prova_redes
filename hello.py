@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return '<form action="/echo" method="POST"><input placeholder="peso(kg)" name="texto"><input type="submit" value="Echo"></form>'
+    return '<form action="/echo" method="POST"><input placeholder="peso(kg)" name="peso"><input placeholder="altura(m)" name="altura"><input type="submit" value="Echo"></form>'
  
 @app.route("/echo", methods=['POST'])
 def echo(): 
-    return "You said: " + request.form.get('texto', '')
+    return "You said: " + request.form.get('peso', '')
  
 
 if __name__ == "__main__":
