@@ -10,7 +10,7 @@ def home():
  
 @app.route("/echo", methods=['POST'])
 def echo(): 
-    return "Seu IMC =  " + str(float(request.form.get('peso', '')) / (float(request.form.get('altura', ''))*float(request.form.get('altura', ''))) ) + " <img src='IMC.png'>"
+    return "Seu IMC =  " + str(float(request.form.get('peso', '')) / (float(request.form.get('altura', ''))*float(request.form.get('altura', ''))) )
  
 
 if __name__ == "__main__":
