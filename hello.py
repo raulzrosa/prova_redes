@@ -1,13 +1,13 @@
 import os
 from flask import Flask, request, render_template
-
+from math import exp
 
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return '<form action="/echo" method="POST"><input placeholder="Kilograma" name="peso"><input placeholder="metros" name="altura"><input type="submit" value="Calcular"></form>'
+    return '<form action="/echo" method="POST"><input name="text"><input type="submit" value="Echo"></form>'
  
 @app.route("/echo", methods=['POST'])
 def echo(): 
