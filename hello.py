@@ -1,12 +1,16 @@
 import os
-from flask import Flask, render_template
-
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "<p> oi</p>"
+    return '<form action="/echo" method="POST"><input name="text"><input type="submit" value="Echo"></form>'
+ 
+@app.route("/echo", methods=['POST'])
+def echo(): 
+    return "You said: " + request.form['text']
+ 
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
