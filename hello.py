@@ -10,7 +10,7 @@ def home():
  
 @app.route("/echo", methods=['POST'])
 def echo(): 
-    return "IMC =  " + STR(float(request.form.get('peso', '')))
+    return "IMC =  " + str(float(request.form.get('peso', '')))
  
 
 if __name__ == "__main__":
