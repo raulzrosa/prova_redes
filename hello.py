@@ -1,5 +1,9 @@
 import os
+<<<<<<< HEAD
 from flask import Flask
+=======
+from flask import Flask, request, render_template
+>>>>>>> eb29e3ff9f987d4bb1acb701cea09f0966c229c9
 
 app = Flask(__name__)
 
